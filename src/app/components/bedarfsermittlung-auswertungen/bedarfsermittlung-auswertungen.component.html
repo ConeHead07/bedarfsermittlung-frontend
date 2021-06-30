@@ -1,0 +1,35 @@
+<p>bedarfsermittlung-auswertungen works!</p>
+
+<mat-tab-group #myTabGroup mat-align-tabs="start" [selectedIndex]="selectedTabIndex"
+               (focusChange)="tabFocusChange($event)"
+               (selectedTabChange)="tabSelectedTabChange($event)"
+               (animationDone)="tabAnimationDone()">
+  <mat-tab #MatTabInterviewOverview id="MatTabInterviewOverview" label="Interview-Overview">
+    <div #myTabInterviewOverview id="myTabInterviewOverview"></div>
+  </mat-tab>
+  <mat-tab #MatTabTaetigkeiten id="MatTabTaetigkeiten" label="Tätigkeiten">
+    <div #myTabTaetigkeiten id="myTabTaetigkeiten"></div>
+  </mat-tab>
+  <mat-tab #MatTabMobilesArbeiten id="MatTabMobilesArbeiten" label="Mobiles Arbeiten">
+    <div #myTabMobilesArbeiten id="myTabMobilesArbeiten"></div>
+  </mat-tab>
+  <mat-tab #MatTabMobilesArbeitenAbleitung id="MatTabMobilesArbeitenAbleitung" label="Mobiles Arbeiten Ableitung">
+    <div #myTabMobilesArbeitenAbleitung id="myTabMobilesArbeitenAbleitung"></div>
+  </mat-tab>
+  <mat-tab #MatTabInterviewBase id="MatTabInterviewBase" label="Interview-Basis">
+    <div #myTabInterviewBase id="myTabInterviewBase"></div>
+  </mat-tab>
+</mat-tab-group>
+<button mat-button color="primary" (click)="reloadAllData()">Load Ajax</button>
+<button  mat-button color="primary" (click)="showColumnPicker()">Spalten</button>
+
+<div>
+  <div class="tabulator-menu">
+    {{ activeTableColumns.length }}
+    <div class="tabulator-menu-item" *ngFor="let col of activeTableColumns; let idx = index">
+      <mat-checkbox class="example-margin" [checked]="col.checked" (change)="columnToggle(idx)">{{ col.title }} {{ col.checked }}</mat-checkbox>
+    </div>
+  </div>
+</div>
+
+

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+
+  public onActivate(event: any): void {
+    console.log('#12 app.component.ts onActivate', { event });
+  }
 }

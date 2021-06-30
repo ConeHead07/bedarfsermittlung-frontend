@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.tabulator .tabulator-header,
+.tabulator .tabulator-header .tabulator-col {
+  height: 3rem;
+}
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: initial;
+}
+.tabulator .tabulator-col-title,
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+  white-space: initial;
+}
+
+.tabulator .tabulator-header .tabulator-col.yellow-background {
+  background-color: yellow;
+  color: black;
+}
+.tabulator .tabulator-header .tabulator-col.yellow-background:hover,
+.tabulator .tabulator-header .tabulator-col.yellow-background:focus {
+  background-color: orange;
+  color: black;
+}
+
+.tabulator .tabulator-header .tabulator-col.black-col-header {
+  background-color: black;
+  color: white;
+}
+.tabulator .tabulator-header .tabulator-col.black-col-header:hover,
+.tabulator .tabulator-header .tabulator-col.black-col-header:focus {
+  background-color: #3e3e3e;
+}
+
+.tabulator .tabulator-header .tabulator-col.green-col-header {
+  background-color: green;
+  color: black;
+}
+.tabulator .tabulator-header .tabulator-col.green-col-header:hover,
+.tabulator .tabulator-header .tabulator-col.green-col-header:focus {
+  background-color: #3e3e3e;
+}
+
+.tabulator .tabulator-header .tabulator-col.blue-col-header {
+  background-color: #2828b4;
+  color: white;
+}
+.tabulator .tabulator-header .tabulator-col.blue-col-header:hover,
+.tabulator .tabulator-header .tabulator-col.blue-col-header:focus {
+  background-color: #2828b4;
+}
+
+.tabulator .tabulator-header .tabulator-col.red-col-header {
+  background-color: #720b0b;
+  color: yellow;
+}
+.tabulator .tabulator-header .tabulator-col.red-col-header:hover,
+.tabulator .tabulator-header .tabulator-col.red-col-header:focus {
+  background-color: #720b0b;
+}
+
+.tabulator .tabulator-col.col-spacer,
+.tabulator .tabulator-col.col-spacer[tabulator-field=SPACER],
+.tabulator .tabulator-row .tabulator-cell.col-spacer,
+.tabulator .tabulator-header .tabulator-col.col-spacer {
+  border-top: 0;
+  border-bottom: 0;
+  background-color: #fff;
+  padding:0;
+  position: relative;
+}
+.tabulator .col-spacer::after,
+.tabulator .col-spacer[tabulator-field=SPACER]::after {
+  content: "";
+  position:absolute;
+  top: -1px;
+}
